@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="src/css/colors.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/todo.css">
+    <script src="src/js/funcs.js" charset="utf-8"></script>
+    <script src="src/js/updatePage.js" charset="utf-8"></script>
+    <title>ECSS</title>
+  </head>
+  <body class="Body_Bright">
+    <div id="Update_Box" class="Box_Bright">
+        <div id="__mainHeader">
+        <h1 id="__mainTitle">Sürüm Kontrol</h1>
+        <div id="__mainButtons">
+          <p class="__buttons __closeButtons" id="UpdateBoxCloseButton">X</a></div>
+        </div>
+        <div id="RoadMapUpdatesSwitcher">
+          <label class="switch">
+            <input type="checkbox" id="updateVroadmap">
+            <span class="slider UpdateVSlider">
+                <p class="__slide-button">Updates</p>
+                <p class="__slide-button">Road Map</p></span>
+          </label>
+        </div>
+
+      <ul class="Updates" id="RoadMaps">
+        <li class="Surum">Yakın Zamanda Yapılacaklar</li>
+            <li>Yol Haritası tasarımı değiştirilecek.</li>
+            <li>Bitenler ve Silinenler olmak üzere iki veri kayıt alanı eklenecek.</li>
+            <li>Pencere boyut ayarı getirilecek.</li>
+            <li>Dil desteği getirilecek.</li>
+            <li>ToDo verileri şifrelenebilecek.</li>
+            <li>Renk paketleri getirilecek.</li>
+            <li>Sıralama çeşitleri getirilecek.</li>
+        <li class="Surum">Planlananlar</li>
+            <li>Kodlarda büyük çaplı optimizasyon sağlanacak.</li>
+            <li>Alt başlıklı ToDo görevleri getirilecek.</li>
+        </ul>
+        <p class="Desc" id="RoadMapsD">Yol haritası değişebilir veya iptal edilebilir.</p>
+      
+        <ul class="Updates" id="NotRoadMaps">
+        <li class="Surum">Sürüm Numarası: 0.1A.4 | 16.09.2021</li>
+          <li>Tasarımdaki kenarlar için yumuşak ve keskin seçeneği eklendi.</li>
+          <li>Gözlemlenmemiş ancak olası olan bir hata düzeltildi. (Hiç bir Settings verisi yoksa oluşturulacak olan Settings verilerinin yanlış oluşturulması düzeltildi.)</li>
+        <li class="Surum">Sürüm Numarası: 0.1A.3.3 (HotFix 3) | 16.09.2021</li>
+          <li>0.1A.3.2'de ToDo verilerinin ve ayarların dosyalara gömülmesi sorunu çözüldü.</li>
+        <li class="Surum">Sürüm Numarası: 0.1A.3.2 (HotFix 2) | 16.09.2021</li>
+          <li>Kısayol ile çalıştırılırken programın kullanılmaz hale gelmesi çözüldü.</li>
+        <li class="Surum">Sürüm Numarası: 0.1A.3.1 (HotFix 1) | 16.09.2021</li>
+          <li>Yeni görev eklenirken gözüken uyarı kutusu kaldırıldı.</li>
+          <li>Build edildiğinde düzenleme penceresinin açılmama sorunu çözüldü.</li>
+        <li class="Surum">Sürüm Numarası: 0.1A.3 | 15.09.2021</li>
+          <li>Ayarlar tasarımı iyileştirildi.</li>
+          <li>Her görev için "Bitiş Tarihi" özelliği eklendi.</li>
+          <li>Sıralama Modu özelliği eklendi. (Ayarlar bölümünde)</li>
+          <li>"Bitir" tuşu "Sil" tuşu olarak yeniden isimlendirildi.</li>
+          <li>10'luk arttırma %5 ile değiştirildi.</li>
+          <li>Road Map alanı eklendi</li>
+          <li>Dosya boyutu optimize edildi.</li>
+          <li class="Spoiler">"Bitenler" ve "Silinenler" bir sonraki güncellemede eklenecek.</li>
+          <li class="Spoiler">Kod optimizasyonu sonraki güncellemelerde sağlanacak.</li>
+          <li class="Info">0.1A.2B sürümünün aksine bu sürüm bütün sürümlerle geriye dönük olarak uyumlu çalışmaktadır.</li>
+        <li class="Surum">Sürüm Numarası: 0.1A.2B | 28.06.2021</li>
+          <li class="Not">BU GÜNCELLEME DERLENMEDEN HEMEN ÖNCE İPTAL EDİLMİŞTİR.</li>
+          <li class="UstunuCiz">Ayarlar tasarımı iyileştirildi.</li>
+          <li class="UstunuCiz">Her görev için "Bitiş Tarihi" özelliği eklendi.</li>
+          <li class="UstunuCiz">Sıralama Modu özelliği eklendi. (Ayarlar bölümünde)</li>
+          <li class="UstunuCiz">Bir sonraki güncellemeye kadar "Bitir" tuşu "Sil" olarak değiştrildi.</li>
+          <li class="Info UstunuCiz"> Bu güncelleme, 0.1A.1.3 ve öncesi sürümlerle uyumlu değildir. İnce ayar gerektirir.</li>
+          <li class="Not UstunuCiz">%10'luk arttırma %5 ile değiştirildi.(Bir sonraki güncellemeye kaldı)</li>
+          <li class="Not UstunuCiz">"Bitenler" ve "Silinenler" eklendi.(Bir sonraki güncellemeye kaldı)</li>
+          <li class="Not UstunuCiz">Kod optimizasyonu sağlandı.(Bir sonraki güncellemeye kaldı)</li>
+        <li class="Surum">Sürüm Numarası: 0.1A.1.3 (HotFix 1) | 04.06.2021</li>
+          <li>Sürüm notlarında tasarım iyileştirmesi yapıldı.</li>
+          <li>Gözlemlenmemiş ancak olası olan bir hata düzeltildi. (Kapatma Tuşuna basılamama olası hatası düzeltildi.)</li>
+          <li>0.1A.0.1 HotFix'inde bulunan yazım hatası düzeltildi. (aktifleştirildi/düzeltildi yazısı eklendi)</li>
+        <li class="Surum">Sürüm Numarası: 0.1A.1 | 03.06.2021</li>
+          <li>Sadece ana ekrana özel olarak minimize tuşu eklendi.</li>
+        <li class="Surum">Sürüm Numarası: 0.1A.0.2 (HotFix 2) | 18.05.2021</li>
+          <li>Renk teması ayarlarken uygulamanın bozulması düzeltildi.</li>
+          <li>Sürüm notlarının tasarımı düzenlendi.</li>
+          <li class="Not">Minimize etme tuşu eklenmedi.(Bir sonraki güncellemeye kaldı)</li>
+        <li class="Surum">Sürüm Numarası: 0.1A.0.1 (HotFix 1) | 18.05.2021</li>
+          <li>Sekmelere renk modu desteği geldi/aktifleştirildi/düzeltildi.</li>
+          <li>"Yeni görev Ekle" sekmesinin kapatılamaması sorunu düzeltildi.</li>
+          <li>%100 yerine gözüken %99 yazısı düzeltildi ve olası problemler çözüldü.</li>
+          <li>Sürüm notları eklendi.</li>
+          <li>Sürüm notları için yeni tasarım geliştirildi.</li>
+          <li class="Not">Minimize etme tuşu eklenmedi.(Bir sonraki güncellemeye kaldı)</li>
+        <li class="Surum">Sürüm Numarası: 0.1A | 17.05.2021</li>
+          <li>Çıkış yaptı.</li>
+        </ul>
+        <p class="Desc" id="NotRoadMapsD">Bu sürümde herhangi bir sürüm kontrolü yapılmamaktadır. Güncellemeler el ile yapılabilir.</p>
+    </div>
+  </body>
+</html>

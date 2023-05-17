@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="src/css/colors.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/todo.css">
+    <script src="src/js/funcs.js" charset="utf-8"></script>
+    <script src="src/js/mainWindow.js" charset="utf-8"></script>
+    <title>ECSS</title>
+  </head>
+  <body class="Body_Bright">
+    <div id="__mainWindow">
+      <div id="__mainHeader">
+        <h1 id="__mainTitle">ToDo</h1>
+        <div id="__mainButtons">
+          <p class="__buttons __blueButton" id="__minimizeMain">_</p>
+          <p class="__buttons" id="__closeMain">X</p>
+        </div>
+      </div>
+      <div id="__mainContent">
+        <div id="Header">
+          <div id="Header_Menu">
+            <p class="Button Button_Green" id="NewJobsShowButton">Yeni Görev Ekle</a>
+            <p class="Button Button_Yellow" id="UpdateBoxShowButton">Sürüm Kontrol</a>
+            <p class="Button Button_Blue" id="SettingsShowButton">Ayarlar</a>
+          </div>
+        </div>
+        <div id="Engelleyici"></div>
+        <div id="ToDo_Lists">
+          <div class="ToDo_Block ToDo_Bright">
+            <h2 class="ToDo_Title">Yapılacaklar</h2>
+            <div class="ToDo_Items">
+              <div class="ToDo_Item Item_Bright">
+                <h3 class="GorevAdi">Yapılacak Görev Adı</h3>
+                <p class="GorevAciklamasi">Görev açıklaması burada yer alacak.</p>
+                <div class="Ilerleme">
+                  <div class="Basari b10"></div>
+                  <p class="YuzdelikYazi">0</p>
+                </div>
+              </div>
+              <div class="ToDo_Item Item_Bright">
+                <h3 class="GorevAdi">Yapılacak Görev Adı</h3>
+                <p class="GorevAciklamasi">Görev açıklaması burada yer alacak.</p>
+                <div class="Ilerleme">
+                  <div class="Basari b20"></div>
+                  <p class="YuzdelikYazi">0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

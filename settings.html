@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="src/css/colors.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/todo.css">
+    <script src="src/js/funcs.js" charset="utf-8"></script>
+    <script src="src/js/settings.js" charset="utf-8"></script>
+    <title>ECSS</title>
+  </head>
+  <body class="Body_Bright">
+    <div id="Settings_Box" class="Box_Bright">
+      <div id="__mainHeader">
+        <h1 id="__mainTitle">Ayarlar</h1>
+        <div id="__mainButtons"><p class="__buttons __closeButtons" id="SettingsCloseButton">X</a></div>
+      </div>
+      <div id="Scrollable">
+      <ul id="Settings">
+        <li>Karanlık Mod:</li>
+        <li>
+          <select class="DarkModeSettings" id="ThemeOptions" name="DarkModeSettings">
+            <option value="default">İşletim Sistemine Bağlı***</option>
+            <option value="bright">Aydınlık Tema</option>
+            <option value="dark">Karanlık Tema</option>
+          </select>
+          <p class="Details">İşletim Sistemine Bağlı seçeneği işletim sisteminin uygulama modu renk temasını otomatik olarak kullanır. Buna bağlı olarak karanlık ve aydınlık mod otomatik aktifleşir.</p>
+        </li>
+        <li>Sıralama Modu:</li>
+        <li>
+          <select class="SortingMode" id="SortOptions" name="SortingMode">
+            <option value="id">Eklenme Tarihine Göre</option>
+            <option value="date">Bitiş Tarihine Göre</option>
+            <option value="idat">Öncelik Hesaplı</option>
+          </select>
+          <p class="Details">Öncelik Hesaplı: Ekleme Tarihi Ve Bitiş Tarihine bağlı hesaplama yapılır.</p>
+        </li>
+        <li>Kenar Yumuşaklığı:</li>
+        <li>
+          <select class="RadiusMode" id="RadiusOptions" name="RadiusMode">
+            <option value="ymsk">Yumuşak Kenar</option>
+            <option value="kskn">Keskin Kenar</option>
+          </select>
+          <p class="Details">Öncelik Hesaplı: Ekleme Tarihi Ve Bitiş Tarihine bağlı hesaplama yapılır.</p>
+        </li>
+        <li>Renk Körlüğü Modu:*</li>
+        <li>
+          <select class="ColorBlindMode" name="ColorBlindMode" disabled>
+            <option value="default">Kapalı</option>
+            <option value="not-full">Renk Körlüğü Modu</option>
+            <option value="full">Tam Renk Körlüğü Modu</option>
+          </select>
+          <p class="Details">Renk körü modu spesifik renk körlüğüne göre ayrılmaz. Bunun yerine daha belirgin olarak renkleri değiştirir ve her renk körlüğüne uyacak ortak bir renk paleti kullanılır.</p>
+        </li>
+        <li>Yazı Büyüklüğü:*</li>
+        <li>
+          <select class="TextSize" name="TextSize" disabled>
+            <option value="default">Standart</option>
+            <option value="high">Büyük</option>
+            <option value="full-high">Daha Büyük</option>
+          </select>
+        </li>
+        <li>Sıfırla veya Yedekten Yükle:**</li>
+        <li>
+          <div class="TwoButtons">
+            <p class="Button Button_Disabled">Sıfırla</p>
+            <p class="Button Button_Disabled">Yedekten Yükle</p>
+          </div>
+          <p class="Details">Sıfırlamadan sonra önceki veriler "014_73435" isimli dosyaya kaydedilir.*</p>
+          <p class="Details">*: Şu anki sürümde desteklenmemektedir.</p>
+          <p class="Details">**: Kısmi olarak şu anki sürümde desteklenmemektedir.</p>
+          <p class="Details">***: Deneysel olduğu için renk temasının ayarlanması sırasında sorun oluşabilir ve(ya) çalışmayabilir.</p>
+        </li>
+        <li>
+          
+        </li>
+      </ul></div>
+      <ul>
+        <li>
+          <div class="TwoButtons">
+            <p class="Button Button_Green" id="ChangesSaver">Kaydet</p>
+          </div></li>
+      </ul>
+
+    </div>
+  </body>
+</html>

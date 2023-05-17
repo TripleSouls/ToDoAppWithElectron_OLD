@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="src/css/colors.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/todo.css">
+    <script src="src/js/funcs.js" charset="utf-8"></script>
+    <script src="src/js/newTask.js" charset="utf-8"></script>
+    <title>ECSS</title>
+  </head>
+  <body class="Body_Bright">
+    <div id="Add_ToDo_Box" class="Box_Bright">
+      <div id="__mainHeader">
+        <h1 id="__mainTitle">Yeni Görev Ekle</h1>
+        <div id="__mainButtons"><p class="__buttons __closeButtons" id="NewJobsCloseButton">X</a></div>
+      </div>
+      <form id="ToDoForm" method="post">
+        <div class="Box">
+          <label for="gAdi">Görev Adı</label>
+          <input type="text" name="gAdi" value="" id="AddableTaskName" placeholder="Görev Adı">
+        </div>
+        <div class="Box">
+          <label for="gAciklamasi">Görev Açıklaması</label>
+          <input type="text" name="gAciklamasi" value="" id="AddableTaskDesc" placeholder="Görev Açıklaması">
+        </div>
+        <div class="Box">
+          <label for="gTamamlanmasi">Görev Tamamlanması</label>
+          <input type="range" id="gTamamlanmasi" name="gTamamlanmasi" min="0" max="20" value="0" step="1">
+          <p id="YeniGorevYuzdesi">0</p>
+        </div>
+        <div class="Box">
+          <label for="gSonTarihi">Görev Son Tarihi</label>
+          <input type="checkbox" id="gSonTarihiB" name="gSonTarihiB" onclick="checkBoxIslevi()">
+          <input type="date" id="gSonTarihi" min="" onkeydown="return false">
+        </div>
+        <div class="YeniGorevButonlari">
+          <p class="Button Button_Green" id="AddThisTask">Kaydet</p>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript">
+      function minBitisTarihi() {
+        let bugun = new Date();
+        let gun=bugun.getDate();
+        if(gun.length <2)
+        {
+          gun = "0"+gun;
+        }
+        let ay=String(parseInt(bugun.getMonth())+1);
+        if(ay.length<2)
+        {
+          ay = "0"+ay;
+        }
+        let donecek = bugun.getFullYear()+"-"+ay+"-"+gun;
+        console.log(donecek);
+        return(donecek);
+      }
+      function mbtAta()
+      {
+        document.getElementById("gSonTarihi").setAttribute("min", minBitisTarihi());
+      }
+      function checkBoxIslevi(){
+        let ckb = document.getElementById("gSonTarihiB");
+        let trh = document.getElementById("gSonTarihi");
+        if(ckb.checked)
+        {
+          trh.style.visibility = "visible";
+        }else{
+          trh.style.visibility = "hidden";
+          trh.value = null;
+        }
+      }
+      checkBoxIslevi();
+      mbtAta();
+    </script>
+  </body>
+</html>

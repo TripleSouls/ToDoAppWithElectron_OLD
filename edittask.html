@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="src/css/colors.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/todo.css">
+    <script src="src/js/funcs.js" charset="utf-8"></script>
+    <script src="src/js/editTask.js" charset="utf-8"></script>
+    <title>ECSS</title>
+  </head>
+  <body class="Body_Bright">
+    <div id="Edit_ToDo_Box" class="Box_Bright">
+      <div id="__mainHeader">
+        <h1 id="__mainTitle">Görev Düzenle</h1>
+        <div id="__mainButtons"><p class="__buttons __closeButtons" id="EditCloseButton">X</a></div>
+      </div>
+      <form id="ToDoForm" method="post">
+        <div class="Box">
+          <label for="gAdi">Görev Adı</label>
+          <input type="text" id="editTaskName" name="gAdi" value="" placeholder="Görev Adı">
+        </div>
+        <div class="Box">
+          <label for="gAciklamasi">Görev Açıklaması</label>
+          <input type="text" id="editTaskDesc" name="gAciklamasi" value="" placeholder="Görev Açıklaması">
+        </div>
+        <div class="Box">
+          <label for="egTamamlanmasi">Görev Tamamlanması</label>
+          <input type="range" id="egTamamlanmasi" name="egTamamlanmasi" min="0" max="20" value="0" step="1">
+          <p id="eskiGorevTamamlanmasi">0</p>
+        </div>
+        <div class="Box">
+          <label for="eGSonTarihi">Görev Son Tarihi</label>
+          <input type="checkbox" id="eGSonTarihiB" name="eGSonTarihiB" onclick="checkBoxIslevi()">
+          <input type="date" id="eGSonTarihi" min="" onkeydown="return false">
+        </div>
+        <div class="YeniGorevButonlari">
+          <p class="Button Button_Green" id="SaveEditedTask">Kaydet</p>
+          <!--<p class="Button Button_Blue Button_Disabled" id="EndThisTask">Bitir</p>-->
+          <p class="Button Button_Red" id="DeleteThisTask">Sil</p>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript">
+      function minBitisTarihi() {
+        let bugun = new Date();
+        let gun=bugun.getDate();
+        if(gun.length <2)
+        {
+          gun = "0"+gun;
+        }
+        let ay=String(parseInt(bugun.getMonth())+1);
+        if(ay.length<2)
+        {
+          ay = "0"+ay;
+        }
+        let donecek = bugun.getFullYear()+"-"+ay+"-"+gun;
+        console.log(donecek);
+        return(donecek);
+      }
+      function mbtAta()
+      {
+        document.getElementById("eGSonTarihi").setAttribute("min", minBitisTarihi());
+      }
+      function cikti()
+      {
+      }
+      function checkBoxIslevi(){
+        let ckb = document.getElementById("eGSonTarihiB");
+        let trh = document.getElementById("eGSonTarihi");
+        if(ckb.checked)
+        {
+          trh.style.visibility = "visible";
+        }else{
+          trh.style.visibility = "hidden";
+          trh.value = null;
+        }
+      }
+      checkBoxIslevi();
+      mbtAta();
+    </script>
+  </body>
+</html>
